@@ -15,24 +15,28 @@ Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/
  
  #### Pinbelegung und Vergleich
  
- Bez. PCB | Bez. WiFi | Funktion    
-----------|-----------|------------
- J1       | V         | 3V3
- J2       | G         | GND
- J3       | 12 (GPIO) | Relais
- J4       | 0 (GPIO)  | Button
- J5       | 13 (GPIO) | Status LED
- J10      | RX        | ser. RX
+Eine Übersicht über die Belegung der einzelnen Anschlüsse.
  
-Die blaue Status-LED schaltet bei LOW-Signal ein. Damit sie also nur bei Aktion leuchtet (blinkt) muss der GPIO Ausgang am ATMEGA invertiert werden. Asksinn++ bietet mit `sdev.led().invert(true);` die Möglichkeit, dies per Software zu lösen.
-Dem Relais ist ein S8550 Transistor in SMD-Bauweise vorgeschaltet. Der GPIO des ATMEGA wird bei angezogenem Relais mit ca. 5mA belastet
-Der Button verbindet J4 mit GND. Es ist also möglich, über den internen Pullupwiderstand, den Tastendruck auszuwerten.
+ Bez. PCB | WiFi-Mod  | Funktion    | ATMEGA 
+----------|-----------|-------------|--------
+ J1       | V         | 3V3         | 3V3
+ J2       | G         | GND         | GND
+ J3       | GPIO 12   | Relais      | GPIO 8
+ J4       | GPIO 0    | Button      | GPIO 4
+ J5       | GPIO 13   | Status LED  | GPIO 5
+ J10      | RX        | ser. RX     | NC
+ 
+- Die blaue Status-LED schaltet bei LOW-Signal ein. Damit sie also nur bei Aktion leuchtet (blinkt) muss das Ausgangssignal am GPIO5 des ATMEGA invertiert werden. Asksinn++ bietet mit `sdev.led().invert(true);` die Möglichkeit, dies per Software zu lösen.
 
-#### Ansicht S26 Hauptplatine
+- Dem Relais an J5 ist ein S8550 Transistor in SMD-Bauweise vorgeschaltet. Der GPIO des ATMEGA wird bei angezogenem Relais mit ca. 5mA belastet
+
+- Der Button verbindet J4 mit GND. Es ist also möglich, über den internen Pullupwiderstand, den Tastendruck auszuwerten.
+
+#### S26 Hauptplatine
 ![Ansicht S26 Hauptplatine](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/raw/master/img/S26_main.jpg "Ansicht S26 Hauptplatine")
 
-#### Ansicht S26 WiFi-Modul Vorderseite
+#### Vorderansicht S26 WiFi-Modul 
 ![Ansicht S26 WiFi-Modul Vorderseite](https://raw.githubusercontent.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/master/img/S26_wifi_front.jpg "Ansicht S26 WiFi-Modul Vorderseite")
 
-#### Ansicht S26 WiFi-Modul Vorderseite
+#### Rückansicht S26 WiFi-Modul 
 ![Ansicht S26 WiFi-Modul Rückseite](https://raw.githubusercontent.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/master/img/S26_wifi_back.jpg "Ansicht S26 WiFi-Modul Rückseite")

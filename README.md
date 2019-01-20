@@ -6,3 +6,33 @@ Umbau des [Sonoff S26 Zwischenstecker](https://www.itead.cc/sonoff-s26-wifi-smar
 
 Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/AskSinPP),  [Jérôme](https://github.com/jp112sdl/Beispiel_AskSinPP), sowie der Inspirationsquelle [stan23](https://github.com/stan23) mit seinem Umbau [OBI-Wifi-Stecker](https://github.com/stan23/HM-LC-Sw1-Pl-DN-R1_OBI) zu HM-LC-Sw1-Pl-DN-R1_OBI.
 
+![Rückansicht HM-LC-Sw1-Pl-DN-R1_S26](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/raw/master/img/PCB_3D_back.jpg "Rückansicht HM-LC-Sw1-Pl-DN-R1_S26")
+ 
+ ### Details zum S26
+ 
+ Anders als beim Sonoff Basic oder Sonoff S20, befindet sich der ESP8266 auf einer zweiten Platine, die in einem Slot mit der Hauptplatine verlötet ist.
+ Es ist also möglich, das WiFi-Modul durch eine selbst entwickelte Platine auszutauschen um den S26 auf Basis von AskSin++ zu betreiben.
+ 
+ #### Pinbelegung und Vergleich
+ 
+ Bez. PCB | Bez. WiFi | Funktion    
+----------|-----------|------------
+ J1       | V         | 3V3
+ J2       | G         | GND
+ J3       | 12 (GPIO) | Relais
+ J4       | 0 (GPIO)  | Button
+ J5       | 13 (GPIO) | Status LED
+ J10      | RX        | ser. RX
+ 
+Die blaue Status-LED schaltet bei LOW-Signal ein. Damit sie also nur bei Aktion leuchtet (blinkt) muss der GPIO Ausgang am ATMEGA invertiert werden. Asksinn++ bietet mit `sdev.led().invert(true);` die Möglichkeit, dies per Software zu lösen.
+Dem Relais ist ein S8550 Transistor in SMD-Bauweise vorgeschaltet. Der GPIO des ATMEGA wird bei angezogenem Relais mit ca. 5mA belastet
+Der Button verbindet J4 mit GND. Es ist also möglich, über den internen Pullupwiderstand, den Tastendruck auszuwerten.
+
+#### Ansicht S26 Hauptplatine
+![Ansicht S26 Hauptplatine](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/raw/master/img/S26_main.jpg "Ansicht S26 Hauptplatine")
+
+#### Ansicht S26 WiFi-Modul Vorderseite
+![Ansicht S26 WiFi-Modul Vorderseite](https://raw.githubusercontent.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/master/img/S26_wifi_front.jpg "Ansicht S26 WiFi-Modul Vorderseite")
+
+#### Ansicht S26 WiFi-Modul Vorderseite
+![Ansicht S26 WiFi-Modul Rückseite](https://raw.githubusercontent.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/master/img/S26_wifi_back.jpg "Ansicht S26 WiFi-Modul Rückseite")

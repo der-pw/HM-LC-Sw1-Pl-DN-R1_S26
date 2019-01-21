@@ -26,7 +26,8 @@ Eine Übersicht über die Belegung der einzelnen Anschlüsse.
  J5       | GPIO 13   | Status LED  | GPIO 5
  J10      | RX        | ser. RX     | NC
  
-- Die blaue Status-LED schaltet bei LOW-Signal ein. Damit sie also nur bei Aktion leuchtet (blinkt) muss das Ausgangssignal am GPIO5 des ATMEGA invertiert werden. Asksinn++ bietet mit `sdev.led().invert(true);` die Möglichkeit, dies per Software zu lösen.
+- Die blaue Status-LED schaltet bei LOW-Signal an J5 ein. Damit sie also nur bei Aktion leuchtet (blinkt) muss das Ausgangssignal am GPIO5 des ATMEGA invertiert werden. Asksinn++ bietet mit `sdev.led().invert(true);` die Möglichkeit, dies per Software zu lösen.
+Die rote Indikator-LED für ON/OFF schaltet zusammen mit dem Relais.
 
 - Dem Relais an J5 ist ein S8550 Transistor in SMD-Bauweise vorgeschaltet. Der GPIO des ATMEGA wird bei angezogenem Relais mit ca. 5mA belastet
 

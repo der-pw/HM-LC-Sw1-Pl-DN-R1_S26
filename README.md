@@ -4,7 +4,7 @@
 
 Umbau des [Sonoff S26 Zwischenstecker](https://www.itead.cc/sonoff-s26-wifi-smart-plug.html) zum HM-LC-Sw1-Pl-DN-R1_S26
 
-Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/AskSinPP),  [Jérôme](https://github.com/jp112sdl/Beispiel_AskSinPP), sowie meiner Inspirationsquelle [stan23](https://github.com/stan23) mit seinem Umbau [OBI-Wifi-Stecker](https://github.com/stan23/HM-LC-Sw1-Pl-DN-R1_OBI) zu HM-LC-Sw1-Pl-DN-R1_OBI.
+Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/AskSinPP),  [Jérôme](https://github.com/jp112sdl/Beispiel_AskSinPP), sowie meiner Inspirationsquelle [stan23](https://github.com/stan23) mit seinem Umbau OBI-Wifi-Stecker zu [HM-LC-Sw1-Pl-DN-R1_OBI](https://github.com/stan23/HM-LC-Sw1-Pl-DN-R1_OBI).
 
 ![Rückansicht HM-LC-Sw1-Pl-DN-R1_S26](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/raw/master/img/PCB_3D_back.jpg "Rückansicht HM-LC-Sw1-Pl-DN-R1_S26")
 

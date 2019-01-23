@@ -8,15 +8,15 @@ Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/
 
 ![Rückansicht HM-LC-Sw1-Pl-DN-R1_S26](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/raw/master/img/PCB_3D_back.jpg "Rückansicht HM-LC-Sw1-Pl-DN-R1_S26")
 
-## Programmierung des ATMEGA
+### Programmierung des ATMEGA
 Ich verwende einen Arduino als ISP, daher beziehen sich die Beispiele darauf.
 
-### Fuses
+#### Fuses
 Ext: 0xFF High: 0xD2 Low: 0xE2
 
 `<Pfad zu> .\avrdude -C ..\etc\avrdude.conf -v -p m328p -P com11 -c stk500v1 -b 19200 -U lfuse:w:0xE2:m -U hfuse:w:0xD2:m -U efuse:w:0xFF:m`
 
-### Bootloader
+#### Bootloader
 Hier kann aus der Arduino IDE, der Standard-Bootloader für ATmega328P (3,3 V, 8 MHz) genommen werden.
 
 `<Pfad zu> .\avrdude -C ..\etc\avrdude.conf -v -p m328p -P com11 -c stk500v1 -b 19200 -U flash:w:..\..\..\arduino\avr\bootloaders\atmega\ATmegaBOOT_168_atmega328_pro_8MHz.hex`

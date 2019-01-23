@@ -7,8 +7,21 @@ Umbau des [Sonoff S26 Zwischenstecker](https://www.itead.cc/sonoff-s26-wifi-smar
 Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/AskSinPP),  [Jérôme](https://github.com/jp112sdl/Beispiel_AskSinPP), sowie der Inspirationsquelle [stan23](https://github.com/stan23) mit seinem Umbau [OBI-Wifi-Stecker](https://github.com/stan23/HM-LC-Sw1-Pl-DN-R1_OBI) zu HM-LC-Sw1-Pl-DN-R1_OBI.
 
 ![Rückansicht HM-LC-Sw1-Pl-DN-R1_S26](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/raw/master/img/PCB_3D_back.jpg "Rückansicht HM-LC-Sw1-Pl-DN-R1_S26")
- 
- ### Details zum S26
+
+## Programmierung des ATMEGA
+Ich verwende einen Arduino als ISP, daher beziehen sich die Beispiele darauf.
+
+### Fuses
+Ext: 0xFF High: 0xD2 Low: 0xE2
+
+`<Pfad zu> .\avrdude -C ..\etc\avrdude.conf -v -p m328p -P com11 -c stk500v1 -b 19200 -U lfuse:w:0xE2:m -U hfuse:w:0xD2:m -U efuse:w:0xFF:m`
+
+### Bootloader
+Hier kann aus der Arduino IDE, der Standard-Bootloader für ATmega328P (3,3 V, 8 MHz) genommen werden.
+
+`<Pfad zu> .\avrdude -C ..\etc\avrdude.conf -v -p m328p -P com11 -c stk500v1 -b 19200 -U flash:w:..\..\..\arduino\avr\bootloaders\atmega\ATmegaBOOT_168_atmega328_pro_8MHz.hex`
+
+### Details zum S26
  
  Anders als beim Sonoff Basic oder Sonoff S20, befindet sich der ESP8266 auf einer zweiten Platine, die in einem Slot mit der Hauptplatine verlötet ist.
  Es ist also möglich, das WiFi-Modul durch eine selbst entwickelte Platine auszutauschen um den S26 auf Basis von AskSin++ zu betreiben.

@@ -8,6 +8,38 @@ Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/
 
 ![Rückansicht HM-LC-Sw1-Pl-DN-R1_S26](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/raw/master/img/PCB_3D_back.jpg "Rückansicht HM-LC-Sw1-Pl-DN-R1_S26")
 
+### Bauteile
+
+[Bestellliste](https://www.reichelt.de/my/1496083) bei Reichelt.
+
+Bauteil                  | Bestellnummer   | Anzahl | Kommentar
+------------------------ | --------------- | ------ | ---------
+C1                       | X5R-G0603 10/6  |   1    | -
+C2, C3, C4, C5           | X7R-G0603 100N  |   4    | -
+R1                       | RND 0603 1 10K  |   1    | -
+U1                       | ATMEGA 328P-AU  |   1    | -
+Stiftleiste für CC1101   | SL 1X20G 2,00   |   1    | optional, hilfreich zum Anschließen des ISP
+Buchsenleiste für CC1101 | MPE 156-1-032   |   1    | optional
+
+Die Stiftleistenverbindung sollte nur zu Debugzwecken eingesetzt werden. Aus Platzgründen muss der CC1101 direkt auf die SMD-Pads der Paltine verlötet werden.
+
+Bauteil | Bestellnummer            | Anzahl | Kommentar
+------- | ------------------------ | ------ | ---------
+CC1101  | CC1101 Funkmodul 868 MHz |   1    | z.B. *[eBay](https://www.ebay.de/itm/163171439732)
+
+**Ich habe mit diesem Händler bereits mehrmalig gute Erfahrungen gemacht.*
+
+~8,3 cm Draht als Antenne (auf die mitgelieferte Helixantenne sollte verzichtet werden.
+
+### Bauanleitung
+
+Zuerst den ATmega auflöten, die Markierung (kleiner Punkt) muss zur Beschriftung U1 zeigen.
+Danach die Kondensatoren und den Widerstand auflöten.
+
+Mit einem Multimeter messen ob kein Kurzschluss zwischen VCC und GND besteht (mehrere 10 K Widerstand sind okay).
+
+Den ISP Programmieradapter an die Lötaugen für den CC1101 anschließen. Ein Adapterkabel vom 6-poligen ISP-Adapter auf eine 2 mm-Stiftleiste wird empfohlen und kann ggf. aus Stift- und Buchsenleiste hergestellt werden.
+
 ### Programmierung des ATMEGA
 Ich verwende einen Arduino als ISP, daher beziehen sich die Beispiele darauf.
 
@@ -54,3 +86,8 @@ Die rote Indikator-LED für ON/OFF schaltet zusammen mit dem Relais.
 
 #### Rückansicht S26 WiFi-Modul 
 ![Ansicht S26 WiFi-Modul Rückseite](https://raw.githubusercontent.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/master/img/S26_wifi_back.jpg "Ansicht S26 WiFi-Modul Rückseite")
+
+
+[![Creative Commons Lizenzvertrag](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+Dieses Werk ist lizenziert unter einer [Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz](http://creativecommons.org/licenses/by-nc-sa/4.0/).

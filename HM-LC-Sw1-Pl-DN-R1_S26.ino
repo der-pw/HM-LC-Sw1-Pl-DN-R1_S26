@@ -30,7 +30,7 @@ using namespace as;
 const struct DeviceInfo PROGMEM devinfo = {
   {0x26, 0x00, 0x01},     // Device ID
   "S26PLG0001",           // Device Serial
-  {0x00, 0x02},           // Device Model
+  {0x00, 0xd8},           // Device Model
   0x10,                   // Firmware Version
   as::DeviceType::Switch, // Device Type
   {0x01, 0x00}            // Info Bytes

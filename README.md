@@ -7,7 +7,7 @@
 
 Weitere Informationen gibt es im [Wiki](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/wiki).
 
-![Rückansicht HM-LC-Sw1-Pl-DN-R1_S26](https://github.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/raw/master/img/PCB_3D_back.jpg "Rückansicht HM-LC-Sw1-Pl-DN-R1_S26")
+![Rückansicht HM-LC-Sw1-Pl-DN-R1_S26](https://raw.githubusercontent.com/der-pw/HM-LC-Sw1-Pl-DN-R1_S26/master/img/sonoffatasksin.jpg "Rückansicht HM-LC-Sw1-Pl-DN-R1_S26")
 
 [![Creative Commons Lizenzvertrag](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 

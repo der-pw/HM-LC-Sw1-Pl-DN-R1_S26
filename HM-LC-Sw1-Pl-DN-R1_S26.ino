@@ -4,6 +4,8 @@
 // 2018-09-12 jp112sdl Creative Commons - http://creativecommons.org/licenses/by-nc-sa/3.0/de/
 //- -----------------------------------------------------------------------------------------------------------------------
 
+#define NDEBUG  
+
 // define this to read the device id, serial and device type from bootloader section
 // #define USE_OTA_BOOTLOADER
 
@@ -28,10 +30,10 @@ using namespace as;
 
 // define all device properties
 const struct DeviceInfo PROGMEM devinfo = {
-  {0x26, 0x00, 0x01},     // Device ID
+  {0x01, 0xd8, 0x01},     // Device ID
   "S26PLG0001",           // Device Serial
-  {0x00, 0xd8},           // Device Model
-  0x10,                   // Firmware Version
+  {0x00,0xd8},            // Device Model
+  0x25,                   // Firmware Version
   as::DeviceType::Switch, // Device Type
   {0x01, 0x00}            // Info Bytes
 };

@@ -18,7 +18,7 @@
 #include <Switch.h>
 
 //pins are fixed by the pcb layout
-#define LED_PIN           5
+#define LED_PIN           5  // low-active
 #define CONFIG_BUTTON_PIN 4
 #define RELAY1_PIN        8
 
